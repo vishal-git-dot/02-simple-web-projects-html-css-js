@@ -1,0 +1,149 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.calculator-wrapper {
+  display: flex;
+  position: relative;
+}
+
+/* Calculator box */
+.calculator {
+  width: 260px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Display */
+.display {
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  font-size: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #eaeaea;
+}
+
+.equal {
+  grid-column: span 4;
+  background: #4CAF50;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* History Sidebar */
+.history {
+  margin-left: 20px;
+  min-width: 150px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.history h4 {
+  margin: 0 0 8px 0;
+  font-weight: normal;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#historyList li {
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+/* Dark Theme */
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+body.dark .calculator {
+  background: #1e1e1e;
+  box-shadow: 0 0 20px rgba(255,255,255,0.05);
+}
+
+body.dark .display {
+  background: #333;
+  color: #fff;
+}
+
+body.dark .btn {
+  background: #2c2c2c;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark .btn:hover {
+  background: #3a3a3a;
+}
+
+body.dark .equal {
+  background: #4CAF50;
+  color: #fff;
+}
+
+body.dark .theme-toggle {
+  background: #f0f0f0;
+  color: #222;
+}
+
+body.dark .history {
+  color: #ccc;
+  opacity: 0.7;
+}
